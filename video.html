@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Video Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #d92424;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #main-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            width: 100%;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+
+        #left-section {
+            max-width: 400px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #right-section {
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+            margin-left: 20px;
+            display: none; /* Initially hide the video section */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        .course-name {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #video-description {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="VIDYA LOGO.png" alt="Vidya Logo" style="width: 100px; height: 80px;">
+        <div>
+            <button onclick="openSearch()">Search</button>
+            <button onclick="openProfile()">Profile</button>
+        </div>
+    </header>
+
+    <div id="main-container">
+        <section id="left-section">
+            <!-- Course Names Go Here -->
+            <div class="course-name" onclick="showCourseVideo('course1-video.mp4', 'John Doe', '10 hours of video content', 'Introduction to HTML and CSS, Responsive Web Design Techniques, JavaScript Basics and DOM Manipulation, Introduction to Frontend Frameworks (e.g., React), Web Development Best Practices')">
+                <h2>Course 1: Web Development Fundamentals</h2>
+            </div>
+
+            <!-- Repeat the above course-name block for each course -->
+            <div class="course-name" onclick="showCourseVideo('course2-video.mp4', 'Jane Smith', '8 hours of video content', 'Introduction to Data Science, Data Analysis with Python, Machine Learning Fundamentals, Data Visualization Techniques, Real-world Data Science Projects')">
+                <h2>Course 2: Data Science Essentials</h2>
+            </div>
+
+            <div class="course-name" onclick="showCourseVideo('course3-video.mp4', 'Alice Johnson', '6 hours of video content', 'Principles of Graphic Design, Color Theory and Typography, Adobe Creative Suite Overview, Creating Digital Artwork, Designing for Print and Web')">
+                <h2>Course 3: Introduction to Graphic Design</h2>
+            </div>
+
+            <div class="course-name" onclick="showCourseVideo('course4-video.mp4', 'Michael Brown', '12 hours of video content', 'Introduction to React Native, Building UI Components, State Management with Redux, Navigation in React Native Apps, Building a Complete Mobile App')">
+                <h2>Course 4: Mobile App Development with React Native</h2>
+            </div>
+
+            <div class="course-name" onclick="showCourseVideo('course5-video.mp4', 'Chris Wilson', '8 hours of video content', 'Introduction to Python Syntax, Data Types and Variables, Control Flow and Functions, Working with Files and Libraries, Basic Python Projects')">
+                <h2>Course 5: Python for Beginners</h2>
+            </div>
+
+            <div class="course-name" onclick="showCourseVideo('course6-video.mp4', 'David Smith', '15 hours of video content', 'Advanced JavaScript Concepts, Asynchronous JavaScript and Promises, Modern JavaScript Frameworks, Building Scalable Web Applications, Testing and Debugging in JavaScript')">
+                <h2>Course 6: Advanced JavaScript</h2>
+            </div>
+        </section>
+
+        <section id="right-section">
+            <!-- Video Player and Description Go Here -->
+            <video controls id="course-video">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div id="video-description"></div>
+        </section>
+    </div>
+
+    <script>
+        function showCourseVideo(videoSource, instructor, duration, content) {
+            var videoElement = document.getElementById('course-video');
+            var descriptionElement = document.getElementById('video-description');
+            
+            // Set the source of the video
+            videoElement.src = videoSource;
+
+            // Display the video section
+            document.getElementById('right-section').style.display = 'block';
+
+            // Display video description
+            descriptionElement.innerHTML = `
+                <h3>Instructor</h3>
+                <p>${instructor}</p>
+                <h3>Duration</h3>
+                <p>${duration}</p>
+                <h3>Course Content</h3>
+                <ul>
+                    <li>${content.split(', ').join('</li><li>')}</li>
+                </ul>
+            `;
+        }
+
+        function openSearch() {
+            // Add your search functionality here
+            alert('Open search functionality');
+        }
+
+        function openProfile() {
+            // Add your profile functionality here
+            alert('Open profile functionality');
+        }
+    </script>
+
+</body>
+</html>

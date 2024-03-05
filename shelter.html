@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Webpage View</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		.breadcrumb {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.breadcrumb a {
+			color: #fff;
+			text-decoration: none;
+			margin: 0 5px;
+		}
+		.categories {
+			float: right;
+			left: 0;
+		}
+		.logo {
+			flex-grow: 1;
+			text-align: center;
+		}
+		/*.search {
+			position: absolute;
+			right: 0;
+		}*/
+		.subjects {
+			margin: 20px 0;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		th, td {
+			border: 1px solid #ddd;
+			padding: 8px;
+			text-align: left;
+		}
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+        .logo img {
+            width: 150px;
+            height: auto;
+          }
+          
+	</style>
+</head>
+<body>
+	<div class="breadcrumb">
+		<div class="categories">
+			<select>
+				<option>Dashboard</option>
+				<option>Profile</option>
+				<option>About</option>
+			</select>
+        </div>
+        <div class="logo">
+            <img src="vidyalogo.png" alt="Logo">
+        </div>
+        
+        <div class="search">
+            <input type="text" placeholder="Search">
+        </div>
+        
+    </div>
+            
+                
+	</div>
+	<div class="subjects">
+		<select>
+			<option>Web Development Fundamentals</option>
+			<option>Deep Learning</option>
+			<option>Javascript</option>
+            <option>Artifical Intelligence</option>
+            <option>Python</option>
+            <option>C Programming</option>
+        
+		</select>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Time</th>
+				<th>Lecture</th>
+				<th>Link</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Today</td>
+				<td>Lecture 1</td>
+				<td><a href="#">Link</a></td>
+			</tr>
+			<tr>
+				<td>Missed</td>
+				<td>Lecture 2</td>
+				<td><a href="#">Link</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

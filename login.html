@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+      body {
+        background: rgb(225, 227, 217);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style
+</head>
+<body>
+    <div class="container">
+        <img src="img/logo.png" alt="Login Image">
+        <h1>Welcome to VIDYA</h1>
+        <form action="login.php" method="post">
+            <label for="role">Login As:</label>
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="shelter">Shelter</option>
+            </select>
+            <br>
+
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="./reg.html">Register Here</a></p>
+    </div>
+</body>
+</html>

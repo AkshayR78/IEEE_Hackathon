@@ -1,0 +1,60 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* styles.css */
+#profile {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items horizontally to the center */
+    text-align: center; /* Center align text */
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+.profile-bio h1 {
+    margin-top: 0;
+}
+
+.profile-bio p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.certificates {
+    margin-top: 20px;
+    background-color: #ffffffe7; /* Choose your desired background color */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+.certificates h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.certificates ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.certificates li {
+    margin-bottom: 5px;
+}
+
+
